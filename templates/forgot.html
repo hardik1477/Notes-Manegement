@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forgot password</title>
+        {% load static%}
+        <link rel="stylesheet" href="{% static 'css/allpage.css' %}">
+    </head>
+    <body style="text-align: center ;">
+        <form style="margin-top: 5cm ;" method="post" action = "forgotpassword">
+            {% csrf_token %}
+            <label> enter your email </label><br>
+            <input type="text" name="email" id="email" placeholder="email"><br><br>
+            <label> enter your childwood<br> best friend name </label><br>
+            <input type = "text" name = "bestfriend_name" id="bestfriend_name" placeholder="your bestfriend_name"> <br><br>
+            <button type = "submit"> register </button>
+            {% if x == 1 %}
+                <div style ="color: red;">invalid details</div>
+            {% endif %}
+        </form>
+    </body>
+</html>

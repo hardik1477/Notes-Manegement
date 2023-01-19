@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title> my page</title>
+        {% load static%}
+        <link rel="stylesheet" href="{% static 'css/allpage.css' %}">
+    </head>
+    <body> 
+        <input type="hidden" name = "fullname" value={{fullname}}/>
+        <div class="cdiv">
+            <a href="/create?mail={{mail}}&fullname={{fullname}}">CREATE</a>
+            <a href="logout">LOGOUT</a><br>
+        </div>
+        <div style = 'font-size: 50px;'> {{fullname}}</div>
+        <hr>
+        <hr>
+        {% for i in files %}
+        {% if i.email == mail %}
+        <div class="cddiv">
+            <a href="/notes?id={{i.id}}&fullname={{fullname}}">{{i.name}} </a>
+        </div>
+        <hr>
+            <input type="hidden" name = "product_id" value={{i.id}}>
+        {% endif %}
+        {% endfor %}
+    </body>
+</html>

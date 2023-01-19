@@ -1,0 +1,45 @@
+.cdiv a:hover{
+    background-color: green;
+}
+.cdiv{
+    background-color: black;
+    overflow: hidden;
+}
+.cdiv a{
+    padding: 14px 16px;
+    display: block;
+    float: right;
+    margin-right: 25px;
+    text-decoration: none;
+}
+h1 {text-align: center;
+}
+.plusdesign{
+    margin-top: 20cm;
+}
+
+.photo{
+    background-size: 180px 900px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+}
+
+.sbutton{
+    margin-top: 3cm;
+    margin-right: 5cm;
+    background-color: green;
+    size: 40px;
+}
+
+.cddiv a:hover{
+    background-color: green;
+}
+.cddiv{
+    overflow: hidden;
+}
+.cddiv a{
+    padding: 14px 16px;
+    margin-right: 25px;
+    text-decoration: none;
+}

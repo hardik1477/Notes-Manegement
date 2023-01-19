@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title> my page</title>
+        {% load static%}
+        <link rel="stylesheet" href="{% static 'css/allpage.css' %}">
+    </head>
+    <body>
+        <form action="savenew">
+            <input type="hidden" name = "mail" value={{mail}}>
+            <input type="hidden" name = "fullname" value={{fullname}}>
+            <button type="submit" >save</button>
+            <hr>
+            <input type="text" name="filename" placeholder="enter your file name" value ={{filename}}>
+            {% if count == 1 %}
+            <div style="color: red;">enter the  file name  first</div>
+            {% endif %}
+            {% if count == 2 %}
+            <div style="color: red;">this file name has already been taken</div>
+            {% endif %}
+            <hr>
+            <textarea name="text" rows="50" cols="200" id="text">{{txt}}</textarea>
+        </form>
+    </body>
+</html>

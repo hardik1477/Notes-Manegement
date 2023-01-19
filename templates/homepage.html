@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title> my page</title>
+        <style>
+            .bg{
+                background-size: 1200px 600px;
+                background-repeat: no-repeat;
+                background-position: top;
+                background-attachment: fixed;
+            }
+        </style>
+        {% load static%}
+        <link rel="stylesheet" href="{% static 'css/allpage.css' %}">
+    </head>
+    <body class="bg" style="background-image: url('{% static "wp.jpg"%}";>
+        <div class="cdiv">
+            <a href="login">LOGIN</a>
+        </div>
+        <h1 style = "margin-top: 5cm;"> you have not logged in yet</h1><br>
+        <h1 style ="font-size: 15px;"> for login click on top - right</h1>
+    </body>
+</html>

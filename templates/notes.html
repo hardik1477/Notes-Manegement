@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title> my page</title>
+        {% load static%}
+        <link rel="stylesheet" href="{% static 'css/allpage.css' %}">
+    </head>
+    <body>
+        <form action="/save?id={{id}}&fullname={{fullname}}">
+            <div class="cdiv">
+                <a href="/delete?id={{id}}&fullname={{fullname}}">Delete</a>
+            </div>
+            <hr>
+            <button type="submit">save</button>
+        {% for i in y %}
+        {% if i.id == id %}
+        <hr>
+            <input type="hidden" name = "id" value={{id}}>
+            <input type="hidden" name = "fullname" value={{fullname}}>
+            <input type="text" name = "name" value="{{i.name}}" required>
+            <hr>
+            <textarea name="text" rows="50" cols="200" id="text">{{i.txt}}</textarea>
+        {% endif %}
+        {% endfor %}
+    </form>
+    </body>
+</html>

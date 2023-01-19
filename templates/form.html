@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Form</title>
+        {% load static%}
+        <link rel="stylesheet" href="{% static 'css/allpage.css' %}">
+    </head>
+    <body  style = "text-align:center">
+        <form method="post" action = "register">
+            {% csrf_token %}
+            <label>First Name(Your name)</label><br>
+            <input type = "text" pattern = "[a-z,A-Z]*" name = "name" placeholder="your name" required value={{uname}}><br><br>
+            <label>Last Name(surname)</label><br>
+            <input type = "text" name = "surname" placeholder="surname" required value={{usurname}}><br><br>
+            <label>Your email</label><br>
+            <input type = "text" name = "email"  placeholder="email" required value={{uemail}}><br><br>
+            <label>What is your childhood <br>best friend name ?</label><br>
+            <input type = "text" name = "best_friendname" placeholder="your best friend name" required value={{ubfname}}><br><br> 
+            <label>Password</label><br>
+            <input type="password" name="password" id="password" placeholder="password"required><br><br>
+            <label> Confirm Password </label><br>
+            <input type="password" name = "confirmpass" id = "confirmpass" placeholder="confirm password"required><br><br>
+            {% if x == 1 %} 
+                <div style="color: red;"> this email is alrady used </div>
+            {% endif %}
+            <button id = "submit" onclick="functionclick()"> Register </button>
+        </form>
+        <script>
+            function functionclick(){
+                if(document.getElementById("password").value != document.getElementById("confirmpass").value ){
+                    alert("password does not match");
+                }
+            }
+        </script>
+    </body>
+</html>
